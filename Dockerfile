@@ -6,7 +6,7 @@ COPY requirements.txt /tmp/requirements.txt
 # 执行指令
 RUN set -eux; \
         pip install --upgrade pip -i http://pypi.douban.com/simple  --trusted-host pypi.douban.com; \
-        pip install -r /tmp/requirements.txt -i http://pypi.douban.com/simple  --trusted-host pypi.douban.com; \
+        pip install -r /tmp/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple  --trusted-host pypi.tuna.tsinghua.edu.cn; \
         rm -f /tmp/requirements.txt
 
 # 拷贝项目目录到容器的/app目录下
