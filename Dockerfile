@@ -5,6 +5,7 @@ COPY requirements.txt /tmp/requirements.txt
 
 # 执行指令
 RUN set -eux; \
+        yum install gcc; \
         pip install --upgrade pip -i http://pypi.douban.com/simple  --trusted-host pypi.douban.com; \
         pip install -r /tmp/requirements.txt -i http://pypi.douban.com/simple  --trusted-host pypi.douban.com; \
         rm -f /tmp/requirements.txt
